@@ -24,7 +24,7 @@ class ApiProvider {
                         }
 
                         override fun onError(e: Throwable) {
-                            Log.e(TAG, "onError", e)
+                            Log.e(TAG, "onError" + Log.getStackTraceString(e))
                             apiResult.onAPIFail()
                         }
 
@@ -34,7 +34,7 @@ class ApiProvider {
                         }
                     })
         } catch (e: Exception) {
-            Log.e(TAG, "Exception", e)
+            Log.e(TAG, "Exception" + Log.getStackTraceString(e))
             apiResult.onError(e)
         }
 

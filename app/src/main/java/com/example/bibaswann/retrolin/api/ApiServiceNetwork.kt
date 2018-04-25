@@ -44,10 +44,9 @@ class ApiServiceNetwork private constructor()//hide the public constructor
     override fun intercept(chain: Interceptor.Chain): Response {
         val request = chain.request()
         val builder: Request.Builder
-
-        //Here we can modify request and response if we want
         builder = request.newBuilder()
         val request1 = builder.build()
+        //Here we can modify request1 and response if we want (like adding header or auth)
         val response = chain.proceed(request1)
 
         return response

@@ -26,10 +26,10 @@ class MainActivity : AppCompatActivity() {
 
                 override fun onModel(baseModel: BaseModel) {
                     if (baseModel is SampleGetModel) {
-                        val userId = baseModel.userId;
-                        val id = baseModel.id;
-                        val title = baseModel.title;
-                        val body = baseModel.body;
+                        val userId = baseModel.userId
+                        val id = baseModel.id
+                        val title = baseModel.title
+                        val body = baseModel.body
                         resultText.text = "UserId: "+userId + "\n\nId: " + id + "\n\nTitle: " + title + "\n\nBody: " + body
                     }
                 }
